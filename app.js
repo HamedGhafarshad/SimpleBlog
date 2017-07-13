@@ -19,9 +19,24 @@ var blogSchema = new mongoose.Schema({
 
 var Blog = mongoose.model("Blog", blogSchema);
 
+
 //RESTful Routes
 
+app.get("/", function(req, res){
+    res.redirect("/blogs");
 
-app.listen(process.env.PORT, process.env.IP, function(){
+});
+
+app.get("/blogs", function(req, res){
+    Blog.find({}, function(err, blogs){
+        if(err){
+            console.log(err);
+        }else{
+            res.render("index", {blogs: blogs});
+        }
+    });
+});
+
+app.listen(8888 || process.env.PORT, function(){
     console.log("Server is running");
 });
