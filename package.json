@@ -1,0 +1,23 @@
+{
+  "name": "simpleblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamedGhafarshad/SimpleBlog.git"
+  },
+  "author": "Hamed Ghafarshad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HamedGhafarshad/SimpleBlog/issues"
+  },
+  "homepage": "https://github.com/HamedGhafarshad/SimpleBlog",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
