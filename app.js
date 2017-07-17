@@ -22,6 +22,7 @@ var Blog = mongoose.model("Blog", blogSchema);
 
 //RESTful Routes
 
+//INDEX route
 app.get("/", function(req, res){
     res.redirect("/blogs");
 
@@ -33,6 +34,38 @@ app.get("/blogs", function(req, res){
             console.log(err);
         }else{
             res.render("index", {blogs: blogs});
+        }
+    });
+});
+
+//NEW ROUTE
+app.get("/blog/new", function(req, res){
+    res.render("new");
+
+});
+//CREATE ROUTE
+app.post("/blogs", function(req, res){
+    //create blog
+    //then, redirect to the index
+    Blog.create(req.body.blog, function(err, newBlog){
+       if(err){
+            res.render("new");
+       }else{
+            res.redirect("/blogs");
+        }
+    
+    });
+    //then return to the index
+
+});
+
+//SHOW ROUTE
+app.get("/blogs/:id", function(req, res){
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            res.redirect("/blogs");
+        }else{
+            res.render("show", {blog: foundBlog}); 
         }
     });
 });

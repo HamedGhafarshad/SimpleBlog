@@ -1,4 +1,8 @@
 i icon{
-    font-size: 2em; /* twice the size of the container */
+    font-size: 2.0em; /* twice the size of the container */
 
+}
+
+.container.main{
+    margin-top: 7.0em;
 }
