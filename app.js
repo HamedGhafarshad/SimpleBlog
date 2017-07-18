@@ -70,6 +70,11 @@ app.get("/blogs/:id", function(req, res){
     });
 });
 
+//EDIT ROUTE
+app.get("/blogs/:id/edit", function(req, res){
+   res.render("edit");
+});
+
 app.listen(8888 || process.env.PORT, function(){
     console.log("Server is running");
 });
