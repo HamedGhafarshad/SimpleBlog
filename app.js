@@ -51,7 +51,7 @@ app.get("/blogs", function(req, res){
 });
 
 //NEW ROUTE
-app.get("/blog/new", function(req, res){
+app.get("/blogs/new", function(req, res){
     res.render("new");
 
 });
