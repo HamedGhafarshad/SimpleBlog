@@ -103,6 +103,6 @@ app.put("/blogs/:id", function(req, res){
     });
 });
 
-app.listen(8888 || process.env.PORT, function(){
+app.listen(process.env.PORT || 8888, function(){
     console.log("Server is running");
 });
