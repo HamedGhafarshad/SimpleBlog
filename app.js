@@ -5,7 +5,15 @@ bodyParser  = require("body-parser"),
 mongoose    = require("mongoose");
 
 // APP Config
-mongoose.connect("mongodb://localhost/restful_blog_app");
+var uristring = "mongodb://hghafars:trunks123@ds163672.mlab.com:63672/restful_blog_app";
+//mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect(uristring, function(err, res){
+    if(err){
+        console.log("Error");
+    }else{
+        console.log("Success");
+    }
+});
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
