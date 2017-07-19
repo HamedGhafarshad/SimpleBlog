@@ -101,7 +101,7 @@ app.put("/blogs/:id", function(req, res){
             res.redirect("/blogs");
         }else{
             res.redirect("/blogs/" + req.params.id);
-        }
+        });
     }
 });
 
