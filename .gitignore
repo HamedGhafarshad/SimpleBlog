@@ -1,5 +1,4 @@
-
-gs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -57,3 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+    Contact GitHub API Training Shop Blog About 
+
+
