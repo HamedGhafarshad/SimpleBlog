@@ -5,8 +5,10 @@ bodyParser  = require("body-parser"),
 mongoose    = require("mongoose");
 
 // APP Config
-var uristring = "mongodb://hghafars:trunks123@ds163672.mlab.com:63672/restful_blog_app";
-//mongoose.connect("mongodb://localhost/restful_blog_app");
+var uristring = "mongodb://hghafars:trunks123@ds163672.mlab.com:63672/restful_blog_app"
+
+// mongoose.connect("mongodb://localhost/restful_blog_app");
+
 mongoose.connect(uristring, function(err, res){
     if(err){
         console.log("Error");
